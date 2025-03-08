@@ -3,7 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import volunteerRoutes from "./routes/volunteers";
-import participantRoutes from "./routes/participants";
 
 dotenv.config();
 
@@ -15,7 +14,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/api/volunteers", volunteerRoutes);
-app.use("/api/participants", participantRoutes);
 
 app.get("/", (req, res) => {
   res.send("Green Team API is running 🚀");
